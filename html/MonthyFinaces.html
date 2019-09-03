@@ -6,9 +6,19 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
-<div ng-app="" data-ng-init="firstName='John'">
-    <p>Name: <input type="text" ng-model="name"></p>
-    <p ng-bind="name"></p>
+<div ng-app="" data-ng-init="income=0">
+    <p>Income: <input type="number" ng-model="rate"></p>
+    <select ng-model="hours">
+        <option value=4>Weekly</option>
+        <option value=2>Bi Weekly</option>
+        <option value=1>Monthly</option>
+    </select>
+    <p>Monthly Income: <span>{{hours * rate}}</span></p>
+
+
+    <p>Income: <input type="number" ng-model="income"></p>
+
+    <p ng-bind="income"></p>
 
     <p>The First Name is <span ng-bind="firstName"></span></p>
 
